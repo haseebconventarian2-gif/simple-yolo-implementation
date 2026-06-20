@@ -24,7 +24,7 @@ Minimal Python implementation of real-time YOLO object detection using a camera 
 
 ## Tech Stack
 
-Python · Ultralytics YOLOv8 · OpenCV
+Python Â· Ultralytics YOLOv8 Â· OpenCV
 
 ## Getting Started
 
@@ -53,43 +53,31 @@ python object.py
 
 This is a learning and reference implementation. Review security, validation, monitoring, and deployment settings before production use.
 
-<!-- code-audit-details -->
+## Detailed Code Reference
 
-## 🔄 Runtime Flow
+**Runtime flow:** `Webcam -> OpenCV -> YOLOv8 -> detections -> display`
 
-`Webcam → OpenCV → YOLOv8 → detections → annotated display`
+### Repository map
 
-This flow is derived from the current entry points and service calls.
+- `Camera.py` - project file
+- `object.py` - project file
+- `README.md` - project file
 
-## 🗂 Code Map
-
-| Path | Responsibility |
-| --- | --- |
-| `Camera.py` | Camera smoke test |
-| `object.py` | YOLO detection loop |
-
-## 🔐 Environment Variables
-
-No environment-variable reads were detected.
-
-## 🧪 Validation Guide
+### Validation checklist
 
 1. Install dependencies in a clean virtual environment.
-2. Start the documented entry point and test the root or health route.
-3. Exercise one valid and one invalid request.
-4. Verify external-service errors are handled clearly.
-5. Confirm secrets, private data, indexes, and model artifacts are ignored.
+2. Configure only the environment variables needed by enabled integrations.
+3. Start the documented entry point and test its health or root route.
+4. Exercise successful and invalid requests.
+5. Confirm secrets, private datasets, indexes, and model artifacts are ignored.
 
-## 🔒 Production Checklist
+### Production checklist
 
-- Use managed secret storage and rotate exposed credentials.
+- Use managed secret storage.
 - Add authentication, authorization, rate limiting, and request-size limits.
-- Add automated tests, structured logging, monitoring, and health checks.
+- Add automated tests, structured logs, monitoring, and health checks.
 - Pin and audit dependencies.
 - Define retention and privacy controls for audio and customer data.
 
-## ⚠️ Code-Audit Notes
+> This README reflects the current codebase. External AI, telephony, and messaging features require their respective accounts, assets, and approvals.
 
-- Documentation reflects the current repository code and may expose integrations that need separate cloud accounts, model assets, or channel approval.
-- Treat the project as a reference implementation until its security and deployment configuration are hardened.
-- `object.py` expects weights at `yolo-Weights/yolov8n.pt`.
