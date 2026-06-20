@@ -15,6 +15,14 @@ Minimal Python implementation of real-time YOLO object detection using a camera 
 
 Minimal Python implementation of real-time YOLO object detection using a camera feed.
 
+## 📖 The Story
+
+Computer vision can look intimidating when introduced through large datasets and training pipelines. This project begins somewhere friendlier: point a webcam at the room and let a small pretrained model explain what it sees.
+
+`Camera.py` proves that OpenCV can capture and display the video stream. `object.py` adds YOLOv8 inference, draws bounding boxes, labels detected classes, and reports confidence scores. Keeping those two stages separate makes the learning path easy to follow and debug.
+
+The repository is deliberately small. Logical next steps include automatic model downloads, command-line options, FPS measurement, confidence filtering, video-file input, and a requirements file for reproducible setup.
+
 ## Highlights
 
 - Live webcam capture
@@ -80,4 +88,5 @@ This is a learning and reference implementation. Review security, validation, mo
 - Define retention and privacy controls for audio and customer data.
 
 > This README reflects the current codebase. External AI, telephony, and messaging features require their respective accounts, assets, and approvals.
+
 
